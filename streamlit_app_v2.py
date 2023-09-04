@@ -7,9 +7,9 @@ st.set_page_config(page_title="Nen Ai chatbot💬")
 
 # Replicate Credentials
 with st.sidebar:
-    st.title('🦙💬 Llama 2 Chatbot')
+    st.title('💬NenAi Chatbot')
     if 'REPLICATE_API_TOKEN' in st.secrets:
-        st.success('API key already provided!', icon='✅')
+        st.success('Ready to go!', icon='✅')
         replicate_api = st.secrets['REPLICATE_API_TOKEN']
     else:
         replicate_api = st.text_input('Enter Replicate API token:', type='password')
@@ -30,7 +30,7 @@ with st.sidebar:
     
     temperature = st.sidebar.slider('temperature', min_value=0.01, max_value=5.0, value=0.1, step=0.01)
     top_p = st.sidebar.slider('top_p', min_value=0.01, max_value=1.0, value=0.9, step=0.01)
-    max_length = st.sidebar.slider('max_length', min_value=64, max_value=4096, value=512, step=8)
+    max_length = st.sidebar.slider('max_length', min_value=64, max_value=2000, value=512, step=8)
     
 # Add "Developed by Nen AI" at the bottom
 st.markdown("---")
