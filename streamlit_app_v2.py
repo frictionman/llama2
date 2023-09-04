@@ -3,7 +3,7 @@ import replicate
 import os
 
 # App title
-st.set_page_config(page_title="🦙💬 Llama 2 Chatbot")
+st.set_page_config(page_title="Nen Ai chatbot💬")
 
 # Replicate Credentials
 with st.sidebar:
@@ -32,7 +32,10 @@ with st.sidebar:
     top_p = st.sidebar.slider('top_p', min_value=0.01, max_value=1.0, value=0.9, step=0.01)
     max_length = st.sidebar.slider('max_length', min_value=64, max_value=4096, value=512, step=8)
     
-    st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-a-llama-2-chatbot/)!')
+# Add "Developed by Nen AI" at the bottom
+st.markdown("---")
+st.markdown("Nen Automations")
+
 os.environ['REPLICATE_API_TOKEN'] = replicate_api
 
 # Store LLM generated responses
